@@ -1,0 +1,430 @@
+* {
+    box-sizing: border-box;/* Ensure padding and margin don't affect width */
+}
+
+
+body {
+    font-family: "Open Sans";
+    color: #26272B;
+    background-color: #FAFBFE;
+    display: flex;
+    justify-content: center; /* Center the outer container on the page */
+    align-items: center; /* Center vertically */
+    /* height: 100vh; Full height */
+    margin: 0; /* Remove default margin */
+    gap: 10px; 
+}
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #26272B;
+}
+
+button {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 14px; /* для стр Offer */
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #26272B;
+}
+
+.text.N {
+    font-size: 18px; /* для стр Offer */
+    margin-bottom: 0px;
+    font-weight: bold;
+    
+}
+
+.text.NN {
+    font-size: 16px; /* для стр Offer */
+    margin-bottom: 0px;
+    font-weight: bold;
+    
+}
+
+/* общий стиль end*/
+
+/* header стиль start */
+
+.menu-container {
+    display: flex;
+    justify-content: space-between; /* Размещает логотип слева, меню справа */
+    /* Центрирует элементы по вертикали */
+    padding: 15px;
+    background-color: white;
+    position: relative; /* Для позиционирования псевдоэлемента */
+}
+
+.left .logo {
+    height: auto; /* Высота логотипа */
+}
+
+/* Стиль для горизонтального меню */
+.horizontal-menu ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.horizontal-menu li {
+    margin-left: 10px;
+}
+
+.horizontal-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: 600;
+}
+.menu-container:after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Линия будет внизу контейнера */
+    left: 0;
+    width: 100%;
+    height: 7px; /* Толщина линии */
+    background: linear-gradient(to right, E3EDFF, rgba(237, 243, 254, 0)); /* Градиентная линия */
+    
+}
+
+.about-user {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 80px;
+    
+}
+
+.about-user div {
+    width: auto;
+    padding: 0px 0px;
+    
+}
+
+.about-user img {
+width: 250px; height: auto; max-width: 250px;
+padding: 0px;
+margin-top: auto
+
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; 
+    
+}
+
+/**** Changes 07.11.2024 ****/
+.rounded-button {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    color: white; /* Black text */
+    padding: 10px 30px; /* Padding */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 14px; /* Font size */
+    width: 180px; /* Button width */
+    height: 40px; /* Button width */
+    line-height: 48px;
+    text-align: center; /* Center the text */
+}
+
+.rounded-button.left {
+    background-color: #0038FF; /* Blue background */
+    color: white; /* White text */
+}
+
+.rounded-button.right {
+    background-color: black;
+    color: white; /* White text */
+}
+
+.rounded-button.left:hover {
+    border: 2px solid black; /* Black border */
+    color: black; /* Black text */
+ }
+
+.rounded-button.right:hover {
+    border: 2px solid #0038FF; /* Blue border */
+    color: #0038FF; /* Blue text */
+}
+
+/* Change background color on hover */
+.rounded-button:hover {
+    background-color: white;
+}
+/**** Changes 07.11.2024 ****/
+
+/* появляющееся меню в 4 линии - не используется */
+.burger {
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+    display: none;
+    border: none;
+    background-image: url('imagis/menu.svg');
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/* изменения для меньшего єкрана */
+@media (max-width: 768px) {
+          
+    .burger{
+        display: block;
+    }
+    
+    .about-user div {
+        width: auto;
+        padding: 0px 20px;
+    }
+
+    .about-user {
+       flex-direction: column;
+       align-items: center;
+       border: none;
+       padding: 0px 10px;
+    }
+
+    .inner-container {
+        display: flex; /* Create a flex container for boxes */
+        align-items: center;
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px 20px 20px 20px;  
+    }
+
+    .button-container
+    {
+        flex-direction: column;
+        align-items: center;
+        border: none;
+     }
+    
+    .about-user div {
+        order: 1;
+        text-align: center;
+        width: auto;
+    }
+
+    .about-user img {
+        text-align: center;
+        width: 160px;
+        max-width: 160px;
+        margin-bottom: 20px;
+        box-shadow: -6px 12px 0 #EDF3FE;
+        border-radius: 60%;
+    }
+
+    h1 {font-size: 28px;
+        margin-bottom: 5px;
+     }
+     h2 {font-size: 22px;
+        margin-bottom: 10px;
+     }
+    p {
+        font-size: 16x;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+          
+    .burger{
+        display: block;
+    }
+
+    .about-user div {
+        width: auto;
+        padding: 0px 10px;
+    }
+    .about-user {
+        border: none;
+        padding: 0px 20px;
+     }
+     .inner-container {
+        display: flex; /* Create a flex container for boxes */
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px 30px 20px 30px;
+    }
+     .about-user img {        
+        max-width: 200px;
+        width: 200px;
+    }
+    
+}
+
+/* 5 блоков начало */     
+.inner-container {
+    display: flex; /* Create a flex container for boxes */
+    flex-direction: column; /* Stack sections vertically */
+    padding: 10px 80px 20px 80px;
+}
+
+.outer-container {
+    display: flex; /* Create a flex container */
+    align-items: center; /* Center items vertically */
+    background-color: E3EDFF /* Background color for the separator */
+}
+
+.inner-content-container {
+    display: flex; /* Create a flex container for boxes */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    gap: 15px; /* Gap between boxes */
+    justify-content: center; /* Center boxes horizontally*/
+}
+
+.section-title {
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 20px;
+}
+
+
+/* Sasha - 5 box in container: */
+.box {
+    width: 340px; /* Fixed width for boxes */
+    height: 220px; /* Fixed height for boxes */
+    background-color: white; /* Box background color */
+    border-radius: 10px;
+    color: #45474C; /* Text color */
+    display: flex; /* Flex for centering content */
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+.box-title-container {
+    width: 280px; /* Fixed width for box title container */
+    height : 44px;
+    align-items: center; /* Center text vertically */
+    justify-content: left; /* Align content to left */
+    display: flex; /* Flex for centering content */
+    flex-direction: row; /* Stack sections vertically */
+}
+
+.box-title {
+    padding-left: 16px;
+    font-family: "Open Sans";
+    font-size:20px;
+    font-weight: bold;
+    color:black
+}
+
+.box-icon {
+    width: 36px; 
+    height : 36px;
+} 
+
+.box-content-container {
+    width: 280px; /* Fixed width for box title container */
+    height : 112px;
+    align-items: center; /* Center text vertically */
+    text-align: left ; /* left content */
+    display: flex; /* Flex for centering content */
+    color:#45474C
+}
+
+.photo {
+    border: 3px solid #1D73D5; /* Толщина и цвет рамки */
+    border-radius: 15px; /* Радиус скругления углов */
+    padding: 2px; /* Дополнительное пространство между изображением и рамкой */
+}
+
+/*char GPT menu_down*/
+.black-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.left.logo {
+    height: auto; /* Высота логотипа */
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px
+}
+
+.text.w {
+    font-size: 12px;
+    font-weight: normal;
+    color: white;
+    align-self: flex-end;
+}
+
+.center .center-image {
+    max-width: 70px; /* Максимальная ширина центрального изображения */
+    height: auto;
+}
+
+.menu_down ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu_down li {
+    margin: 0px 0px;
+    padding: 5px 0px;
+}
+
+.menu_down a {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}
+/*char GPT menu_down* конец/
