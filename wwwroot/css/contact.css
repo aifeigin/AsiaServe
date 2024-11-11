@@ -1,0 +1,116 @@
+﻿.dot {
+    display: inline-block;
+    width: 20px; /* Adjust width to give space for dots */
+    text-align: left; /* Align dots to the left to keep centered effect */
+}
+
+    .dot::after {
+        content: '';
+        display: inline-block;
+        animation: dots 1s steps(4, end) infinite;
+    }
+
+@keyframes dots {
+    0% {
+        content: '';
+    }
+
+    25% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    75% {
+        content: '...';
+    }
+
+    100% {
+        content: '';
+    }
+}
+
+.outer_container.wrapper {
+    display: flex; /* Enables horizontal layout for child containers */
+    flex-wrap: wrap; /* Allows wrapping to the next line if space is insufficient */
+    /* gap: 10px; Adds space between the containers */
+}
+
+.inner-container-contact {
+    min-width: 460px; /* Minimum width for the container */
+    flex: 1; /* Makes containers flexible */
+    display: flex; /* Enables column layout inside */
+    flex-direction: column; /* Stacks items vertically */
+    padding: 20px; /* Adds padding */
+    background-color: #FAFBFE; /* Optional: Background color */
+    align-items: center; /* Center text vertically */
+    gap: 20px; /* Adds space between the containers */
+}
+
+    .inner-container-contact.left {
+        justify-content: flex-start; /* Align content to the top for vertical direction or left for row */
+        align-items: flex-start; /* Align content to the left horizontally */
+        padding-top: 10px; /* Adds padding */
+    }
+
+    .inner-container-contact.rigth {
+        justify-content: center; /* Center content horizontally */
+    }
+
+.icon-text {
+    display: inline-flex; /* Ensures items stay on one line and shrink if needed */
+    /* align-items: center; Vertically align icon and text */
+    gap: 8px; /* Adds space between icon and text white-space: nowrap; Prevents wrapping */
+    overflow: hidden; /* Hides overflowing content if the container is too small */
+    text-overflow: ellipsis; /* Optional: Adds "..." if the text overflows */
+    line-height: 22px
+}
+
+.icon {
+    width: 22px; /* Icon width */
+    height: 22px; /* Icon height */
+}
+
+.text {
+    font-size: 18px; /* Customize font size */
+    font-weight: 600;
+    color: #333; /* Text color */
+    overflow: hidden; /* Prevents text overflow */
+    text-overflow: ellipsis; /* Adds ellipsis to overflowing text */
+}
+
+.form {
+    display: flex; /* Enables Flexbox for form layout */
+    flex-direction: column; /* Stacks form elements vertically */
+    width: 100%; /* Makes the form take full width of the container */
+    /* max-width: 400px; Limit form width */
+    justify-content: center;
+    gap: 10px
+}
+
+.form-field {
+    color: #91969F;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px 7px;
+}
+
+.g-recaptcha {
+    display: block; /* Ensures proper layout */
+    margin: 0px;
+}
+
+.form-actions {
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically (if needed) */
+    gap: 20px; /* Adds spacing between elements */
+    width: 100%; /* Optional: Matches parent width */
+}
+
+.small_text {
+    font-size: 12px;
+}
