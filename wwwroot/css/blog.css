@@ -1,0 +1,47 @@
+﻿.inner-container.blog-container {
+    gap: 15px;
+}
+
+.article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.article h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+.content-wrapper {
+    height: 86px; /* Fixed height for preview */
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.article.expanded.content-wrapper {
+    height: auto; /* Automatically adjust height for full content */
+}
+
+.toggle-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.toggle-link:hover {
+    color: #0056b3;
+}
+
+h4 { 
+    padding:0px;
+    margin:0px
+}
