@@ -62,14 +62,14 @@ button {
     color: #26272B;
 }
 
-.text.N {
+.text-N {
     font-size: 18px; /* для стр Offer */
     margin-bottom: 0px;
     font-weight: bold;
     
 }
 
-.text.NN {
+.text-NN {
     font-size: 16px; /* для стр Offer */
     margin-bottom: 0px;
     font-weight: bold;
@@ -78,7 +78,7 @@ button {
 
 /* общий стиль end*/
 
-/* header стиль start */
+/* Стиль для верхнего меню: */
 
 .menu-container {
     display: flex;
@@ -93,7 +93,7 @@ button {
     height: auto; /* Высота логотипа */
 }
 
-/* Стиль для горизонтального меню */
+
 .horizontal-menu ul {
     display: flex;
     list-style-type: none;
@@ -124,6 +124,8 @@ button {
     
 }
 
+
+/* Стиль для верхней части текста с картинкой на стр QA и Расстановки: */
 .about-user {
     display: flex;
     justify-content: space-between;
@@ -144,6 +146,7 @@ margin-top: auto
 
 }
 
+/* 2 кнопки: офер и контакт: */
 .button-container {
     display: flex;
     gap: 10px; 
@@ -210,7 +213,6 @@ margin-top: auto
     flex-direction: column; /* Stack sections vertically */
     padding: 10px 80px 20px 80px;
 }
-
 
 /* изменения для меньшего єкрана */
 @media (max-width: 768px) {
@@ -298,6 +300,8 @@ margin-top: auto
     }
     
 }
+
+/* Sasha - 5 box in container: */
 
 .outer-container {
     display: flex; /* Create a flex container */
