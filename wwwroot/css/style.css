@@ -56,22 +56,22 @@ button {
 }
 
 .text {
-    font-size: 14px; /* для стр Offer */
-    margin-bottom: 10px;
+    font-size: 15px; /* для стр Offer */
+    margin-bottom: 6px;
     font-weight: normal;
     color: #26272B;
 }
 
 .text-N {
     font-size: 18px; /* для стр Offer */
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     font-weight: bold;
     
 }
 
 .text-NN {
     font-size: 16px; /* для стр Offer */
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     font-weight: bold;
     
 }
