@@ -62,6 +62,13 @@ button {
     color: #26272B;
 }
 
+.text-0 {
+    font-size: 15px; /* для стр Offer */
+    margin-bottom: 0px;
+    font-weight: normal;
+    color: #26272B;
+}
+
 .text-N {
     font-size: 18px; /* для стр Offer */
     margin-bottom: 10px;
