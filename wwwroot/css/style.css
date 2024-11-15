@@ -100,7 +100,6 @@ button {
     height: auto; /* Высота логотипа */
 }
 
-
 .horizontal-menu ul {
     display: flex;
     list-style-type: none;
@@ -111,13 +110,15 @@ button {
 
 .horizontal-menu li {
     margin-left: 10px;
+    display: flex;
+    align-content: center;
 }
 
 .horizontal-menu a {
     text-decoration: none;
     color: black;
     font-size: 16px;
-    line-height: 10px;
+    /*line-height: 10px;*/
     font-weight: 600;
 }
 .menu-container:after {
@@ -438,4 +439,47 @@ margin-top: auto
     text-decoration: none;
     color: white;
 }
-/*char GPT menu_down* конец/
+/*char GPT menu_down* конец*/
+
+/* Style for the language switcher wrapper */
+#language-switcher {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Adjust width as needed */
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+    /* Style for the dropdown */
+    #language-switcher select {
+        appearance: none; /* Removes native styling */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        /* padding: 8px 12px;*/
+        padding-right: 30px; /* Space for the arrow */
+        text-align-last: center; /* Centers the text for most browsers */
+    }
+
+        /* Focus styling */
+        #language-switcher select:focus {
+            outline: none;
+            border-color: #0078d7;
+        }
+
+    /* Custom arrow */
+    #language-switcher::after {
+        content: "в-_"; /* Down arrow */
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; /* Arrow doesn't block interaction with select */
+        font-size: 12px;
+        color: black;
+    }

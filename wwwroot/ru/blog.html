@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <meta name="description" content="Explore the true stories of my inner journey and the insights gained along the way"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -12,6 +13,13 @@
     <link rel="stylesheet" href="/css/blog.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+    <!--
+        hrefs must be changed to the absolute urls before publish
+    -->
+    <link rel="alternate" href="/en/index.html" hreflang="en">
+    <link rel="alternate" href="/pt/index.html" hreflang="pt">
+    <link rel="alternate" href="/ru/index.html" hreflang="ru">
 </head>
 <body>
     <header>
@@ -24,9 +32,16 @@
                 <nav class="horizontal-menu">
                     <ul>
                         <li><a href="constellations.html">IT Constellations</a></li>
-                        <li><a href="/index.html">QA</a></li>
+                        <li><a href="index.html">QA</a></li>
                         <li><a href="contactform.html">Contacts</a></li>
-                        <li><img src="/images/map-icons.svg" alt="lang"></li>
+                        <li>
+                            <img src="/images/map-icons.svg" alt="lang">
+                            <select id="language-switcher" onchange="changeLanguage()">
+                                <option value="/en/blog.html" selected>EN</option>
+                                <option value="/pt/blog.html">PT</option>
+                                <option value="/ru/blog.html">RU</option>
+                            </select>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -77,12 +92,13 @@
                     <ul>
                         <li><a href="constellations.html">IT Constellations</a></li>
                         <li><a href="contactform.html">Contacts</a></li>
-                        <li><a href="/index.html">QA</a></li>
+                        <li><a href="index.html">QA</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
 
+        <script src="/js/menu.js"></script>
     </header>
 </body>
 </html>
