@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
+    <meta name="description" content="Reach Out for Your Perfect QA Service or Business Constellation Solution"/>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +14,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
-    <style>
-    </style>
+    <!--
+        hrefs must be changed to the absolute urls before publish
+    -->
+    <link rel="alternate" href="/en/index.html" hreflang="en">
+    <link rel="alternate" href="/pt/index.html" hreflang="pt">
+    <link rel="alternate" href="/ru/index.html" hreflang="ru">
 </head>
 
 <body>
@@ -26,10 +31,17 @@
             <div class="block right">
                 <nav class="horizontal-menu">
                     <ul>
-                        <li><a href="/index.html">QA</a></li>
+                        <li><a href="index.html">QA</a></li>
                         <li><a href="constellations.html">IT Constellations</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><img src="/images/map-icons.svg" alt="lang"></li>
+                        <li>
+                            <img src="/images/map-icons.svg" alt="lang">
+                            <select id="language-switcher" onchange="changeLanguage()">
+                                <option value="/en/contactform.html" selected>EN</option>
+                                <option value="/pt/contactform.html">PT</option>
+                                <option value="/ru/contactform.html">RU</option>
+                            </select>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -37,10 +49,10 @@
         <div class="outer_container wrapper">
             <div class="inner-container-contact left">
                 <h1>Let's connect</h1>
-                <img src="/images/my_photo.png" width="226" height="230" alt="Avatar picture" class="photo"/>
+                <img src="/images/my_photo.png" width="226" height="230" alt="Avatar picture" class="photo" />
                 <div>
                     Привет, меня зовут Ася, я специалист по контролю качества, бизнес-консультант и бизнес-расстановщик из Мадейры, Португалия. Имея более чем 20-летний опыт в обеспечении качества и консультировании клиентов, я работаю частным предпринимателем, помогая компаниям повышать качество программного обеспечения и решать сложные задачи.
-Я здесь, чтобы помогать как контролем качества, так и бизнес-расстановками.
+                    Я здесь, чтобы помогать как контролем качества, так и бизнес-расстановками.
                 </div>
                 <div class="icon-text">
                     <img src="/images/icon phone.svg" alt="Icon" class="icon" />
@@ -62,14 +74,14 @@
                     <input type="email" id="email" name="email" placeholder="E-mail" required class="form-field">
                     <input type="tel" id="phone" name="phone" placeholder="Номер телефона (опционально)" class="form-field">
                     <textarea id="message" name="message" placeholder="Сообщение" required rows="3" class="form-field"></textarea>
-                    
+
                     <!-- CAPTCHA Widget -->
                     <div class="form-actions">
-                         <div class="g-recaptcha" data-sitekey="6Ldy53EqAAAAACf3FsYjUzn0vQaqaDfIpjzWPx-D"></div> <!-- Replace with your CAPTCHA site key -->
-                         <div class="small_text">
+                        <div class="g-recaptcha" data-sitekey="6Ldy53EqAAAAACf3FsYjUzn0vQaqaDfIpjzWPx-D"></div> <!-- Replace with your CAPTCHA site key -->
+                        <div class="small_text">
                             Отправляя данную форму, Вы даете согласие на сбор и обработку ваших персональных данных на условиях нашей публичной оферты в целях рассмотрения вашего запроса и предоставления сопутствующих услуг.
-                         </div>
-                         <button id="submit" name="submit" type="submit" class="rounded-button left">Send</button>
+                        </div>
+                        <button id="submit" name="submit" type="submit" class="rounded-button left">Send</button>
                     </div>
                 </form>
             </div>
@@ -87,7 +99,7 @@
                     <ul>
                         <li><a href="constellations.html">IT Constellations</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/index.html">QA</a></li>
+                        <li><a href="index.html">QA</a></li>
                     </ul>
                 </nav>
             </div>
@@ -95,101 +107,9 @@
 
     </header>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", async function () {
-            const form = document.getElementById("feedbackForm");
+    <script src="/js/contact.js"></script>
 
-            // Get CSRF token
-            let csrfToken;
-            try {
-                const csrfResponse = await fetch(`${window.location.origin}/api/get-csrf-token`, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                    },
-                });
-
-                if (!csrfResponse.ok) {
-                    throw new Error('Failed to fetch CSRF token');
-                }
-
-                const csrfData = await csrfResponse.json();
-                csrfToken = csrfData.token;
-            } catch (error) {
-                console.error("Error fetching CSRF token:", error);
-                return;
-            }
-
-            form.addEventListener("submit", async (event) => {
-                event.preventDefault();
-
-                const feedbackData = {
-                    name: document.getElementById("name").value,
-                    email: document.getElementById("email").value,
-                    phone: document.getElementById("phone").value,
-                    message: document.getElementById("message").value
-                };
-
-                // Get CAPTCHA token
-                const captchaToken = grecaptcha.getResponse();
-                if (!captchaToken) {
-                    alert("Please complete the CAPTCHA.");
-                    return;
-                }
-
-                try {
-                    let buttonID = document.getElementById("submit");
-
-                    let buttonText = replaceButtonText(buttonID, "Wait<span class='dot'></span>");
-
-                    const response = await fetch(`${window.location.origin}/api/feedback`, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "X-CSRF-TOKEN": csrfToken,
-                            "X-Captcha-Token": captchaToken
-                        },
-                        body: JSON.stringify(feedbackData)
-                    });
-
-                    replaceButtonText(buttonID, buttonText);
-
-                    if (response.ok) {
-                        alert("Feedback sent successfully!");
-                        grecaptcha.reset(); // Reset the CAPTCHA after successful submission
-                    } else {
-                        alert("Error sending feedback." + response.statusText);
-                    }
-                } catch (error) {
-                    console.error("Error:", error);
-                    alert("Error sending feedback." + error);
-                }
-            });
-        });
-
-        function replaceButtonText(button, text) {
-            if (button && text) {
-                let oldText = null;
-                if (button.innerHTML) {
-                    oldText = button.innerHTML;
-                    button.innerHTML = text;
-                }
-                else if (button.childNodes[0]) {
-                    oldText = button.childNodes[0].nodeValue;
-                    button.childNodes[0].nodeValue = text;
-                }
-                else if (button.value) {
-                    oldText = button.value;
-                    button.value = text;
-                }
-
-                return oldText;
-            }
-
-            return null;
-        }
-
-    </script>
+    <script src="/js/menu.js"></script>
 
 </body>
 </html>
