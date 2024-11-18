@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+**/obj2/
+**/*.suo
+**/*.user
+**/.vs/
+**/packages/
+src/wwwroot/
