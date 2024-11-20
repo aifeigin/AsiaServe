@@ -129,11 +129,28 @@ button {
     bottom: 0; /* Линия будет внизу контейнера */
     left: 0;
     width: 100%;
-    height: 7px; /* Толщина линии */
+    height: 10px; /* Толщина линии */
     background: linear-gradient(to right, E3EDFF, rgba(237, 243, 254, 0)); /* Градиентная линия */
     
 }
 
+.pt-menu a { 
+    text-decoration: none;  /* меню 404 */
+    color: #0038FF;
+    font-size: 16px;
+    /*line-height: 10px;*/
+    font-weight: 600;
+ 
+}
+
+.pt-menu a:hover { 
+    text-decoration: none;  /* меню 404 */
+    color: #AAC4F4;
+    font-size: 16px;
+    /*line-height: 10px;*/
+    font-weight: 600;
+ 
+}
 
 /* Стиль для верхней части текста с картинкой на стр QA и Расстановки: */
 .about-user {
@@ -322,7 +339,7 @@ margin-top: auto
 .inner-content-container {
     display: flex; /* Create a flex container for boxes */
     flex-wrap: wrap; /* Allow boxes to wrap to the next line */
-    gap: 15px; /* Gap between boxes */
+    gap: 10px; /* Gap between boxes */
     justify-content: center; /* Center boxes horizontally*/
 }
 
@@ -332,25 +349,27 @@ margin-top: auto
     font-weight: bold;
     color:black;
     margin-bottom: 20px;
+    
 }
 
 
 /* Sasha - 5 box in container: */
 .box {
     width: 340px; /* Fixed width for boxes */
-    height: 220px; /* Fixed height for boxes */
+    height: 200px; /* Fixed height for boxes */
     background-color: white; /* Box background color */
     border-radius: 10px;
     color: #45474C; /* Text color */
     display: flex; /* Flex for centering content */
     flex-direction: column; /* Stack sections vertically */
     align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
+     /*justify-content: center; /* Center text horizontally */
 }
 
 .box-title-container {
     width: 280px; /* Fixed width for box title container */
     height : 48px;
+    margin-top: 20px;
     align-items: center; /* Center text vertically */
     justify-content: left; /* Align content to left */
     display: flex; /* Flex for centering content */
