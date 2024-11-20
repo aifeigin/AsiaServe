@@ -4,6 +4,7 @@ using MailService.Service;
 using MailServiceNext.Extensions;
 using MailServiceNext.Model;
 using MailServiceNext.Service;
+using Microsoft.AspNetCore.Http;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateSlimBuilder(args);
@@ -60,6 +61,8 @@ app.GetCrfToken();
 
 // Feedback endpoint (Minimal API style)
 app.FeedbackHook();
+
+app.UseStatusCodePagesWithReExecute("/pt/404.html");
 
 // Enable serving static files from wwwroot
 app.UseStaticFiles();
