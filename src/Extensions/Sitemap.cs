@@ -49,7 +49,7 @@
                 return Results.Content(xml, "application/xml", Encoding.UTF8);
             });
 
-            return Results.NoContent();
+            return Results.BadRequest("The request to get sitemap is failed.");
         }
     }
 }

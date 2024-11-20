@@ -12,6 +12,8 @@ namespace MailServiceNext.Extensions
                 .AddRedirect("^qa.html$", "/en/qa.html", StatusCodes.Status301MovedPermanently)
                 .AddRedirect("^index.html$", "/en/index.html", StatusCodes.Status301MovedPermanently)
                 .AddRedirect("^constellations.html$", "/en/constellations.html", StatusCodes.Status301MovedPermanently)
+                .AddRedirect("^offer-qa.html$", "/en/offer-qa.html", StatusCodes.Status301MovedPermanently)
+                .AddRedirect("^offer-const.html$", "/en/offer-const.html", StatusCodes.Status301MovedPermanently)
                 .AddRedirect("^blog.html$", "/en/blog.html", StatusCodes.Status301MovedPermanently)
                 .AddRedirect("^contactform.html$", "/en/contactform.html", StatusCodes.Status301MovedPermanently);
 
