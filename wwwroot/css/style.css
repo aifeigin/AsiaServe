@@ -221,7 +221,7 @@ margin-top: auto
 .inner-container {
     display: flex; /* Create a flex container for boxes */
     flex-direction: column; /* Stack sections vertically */
-    padding: 10px 80px 20px 80px;
+    padding: 10px 80px 10px 80px;
 }
 
 /* изменения для меньшего єкрана */
@@ -302,7 +302,7 @@ margin-top: auto
    .inner-container {
         display: flex; /* Create a flex container for boxes */
         flex-direction: column; /* Stack sections vertically */
-        padding: 10px 30px 20px 30px;
+        padding: 20px 20px 20px 20px;
     }
      .about-user img {        
         max-width: 200px;
@@ -350,7 +350,7 @@ margin-top: auto
 
 .box-title-container {
     width: 280px; /* Fixed width for box title container */
-    height : 44px;
+    height : 48px;
     align-items: center; /* Center text vertically */
     justify-content: left; /* Align content to left */
     display: flex; /* Flex for centering content */
