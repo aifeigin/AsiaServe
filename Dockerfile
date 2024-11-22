@@ -12,5 +12,8 @@ EXPOSE 8080
 # Update the application to listen on port 8080
 ENV DOTNET_URLS=http://+:8080
 
+# Make the app executable
+RUN chmod +x /app/MailServiceNext
+
 # Set the entry point
 ENTRYPOINT ["/app/MailServiceNext"]
