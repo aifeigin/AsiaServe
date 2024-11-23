@@ -99,7 +99,7 @@ button {
 }
 
 .left .logo {
-    height: auto; /* Высота логотипа */
+    height: 24px; /* Высота логотипа */
 }
 
 .horizontal-menu ul {
@@ -167,7 +167,7 @@ button {
 }
 
 .about-user img {
-width: 250px; height: auto; max-width: 250px;
+width: 250px; height: 250; max-width: 250px;
 padding: 0px;
 margin-top: auto
 
@@ -420,7 +420,7 @@ margin-top: auto
 }
 
 .left.logo {
-    height: auto; /* Высота логотипа */
+    height: 24px; /* Высота логотипа */
     margin: 0px 10px;
     display: flex;
     flex-direction: column;
@@ -438,6 +438,7 @@ margin-top: auto
 .center .center-image {
     max-width: 70px; /* Максимальная ширина центрального изображения */
     height: auto;
+    width: 70px; 
 }
 
 .menu_down ul {
