@@ -1,4 +1,9 @@
-﻿.inner-container.blog-container {
+﻿.kube {
+    float: right; /* или right, если хотите, чтобы изображение было справа */
+    margin: 0 0px 0px 0; /* Добавляет отступы вокруг изображения */
+}
+
+.inner-container.blog-container {
     gap: 15px;
 }
 

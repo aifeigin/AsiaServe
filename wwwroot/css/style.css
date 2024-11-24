@@ -302,7 +302,7 @@ margin-top: auto
     }
 }
 
-@media (max-width: 1000px) {
+ @media (max-width: 1000px) {
           
     .burger{
         display: block;
