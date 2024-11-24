@@ -99,7 +99,7 @@ button {
 }
 
 .left .logo {
-    height: 24px; /* Высота логотипа */
+    height: auto; /* Высота логотипа */
 }
 
 .horizontal-menu ul {
@@ -420,7 +420,7 @@ margin-top: auto
 }
 
 .left.logo {
-    height: 24px; /* Высота логотипа */
+    height: auto; /* Высота логотипа */
     margin: 0px 10px;
     display: flex;
     flex-direction: column;
@@ -438,7 +438,7 @@ margin-top: auto
 .center .center-image {
     max-width: 70px; /* Максимальная ширина центрального изображения */
     height: auto;
-    width: 70px; 
+     
 }
 
 .menu_down ul {
