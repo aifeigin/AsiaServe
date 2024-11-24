@@ -282,6 +282,7 @@ margin-top: auto
 
     .about-user img {
         text-align: center;
+        height: auto;
         width: 160px;
         max-width: 160px;
         margin-bottom: 20px;
@@ -324,6 +325,7 @@ margin-top: auto
      .about-user img {        
         max-width: 200px;
         width: 200px;
+        height: auto;
     }
     
 }

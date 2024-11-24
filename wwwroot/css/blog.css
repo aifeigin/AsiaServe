@@ -32,13 +32,13 @@
     display: block;
     margin-top: 10px;
     text-decoration: none;
-    color: #007BFF;
+    color:#0038FF;
     font-weight: bold;
     cursor: pointer;
 }
 
 .toggle-link:hover {
-    color: #0056b3;
+    color: #AAC4F4;
 }
 
 h4 { 
