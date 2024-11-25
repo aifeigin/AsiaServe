@@ -6,6 +6,8 @@
     {
         // Filter files to exclude certain extensions or directories
         static string[] allowedExtensions = new[] { ".html", ".htm" };
+
+        static string[] disabledPages = new[] { "404.html" };
         public static IResult GetSitemap(this WebApplication app)
         {
             // Define the sitemap.xml endpoint using MapGet
@@ -19,7 +21,7 @@
 
                 // Map files to relative URLs
                 var urls = files
-                    .Where(file => allowedExtensions.Contains(Path.GetExtension(file).ToLower()))
+                    .Where(file => allowedExtensions.Contains(Path.GetExtension(file).ToLower()) && !disabledPages.Contains(Path.GetFileName(file)))
                     .Select(file =>
                 {
                     var relativePath = file.Replace(wwwrootPath, "").Replace("\\", "/").TrimStart('/');
@@ -37,9 +39,9 @@
                         urls.Select(url =>
                             new XElement(ns + "url",
                                 new XElement(ns + "loc", url)
-                                //,new XElement("lastmod", DateTime.UtcNow.ToString("yyyy-MM-dd")), // Optional: Use file metadata for last modified
-                                //new XElement("changefreq", "monthly"),                        // Optional: Customize change frequency
-                                //new XElement("priority", "0.5")                              // Optional: Customize priority
+                            //,new XElement("lastmod", DateTime.UtcNow.ToString("yyyy-MM-dd")), // Optional: Use file metadata for last modified
+                            //new XElement("changefreq", "monthly"),                        // Optional: Customize change frequency
+                            //new XElement("priority", "0.5")                              // Optional: Customize priority
                             )
                         )
                     )

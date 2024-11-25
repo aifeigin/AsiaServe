@@ -13,9 +13,9 @@ namespace MailServiceNext.Extensions
             app.MapGet("/api/get-csrf-token", (IAntiforgery antiforgery, HttpContext context) =>
             {
                 var tokens = antiforgery.GetAndStoreTokens(context);
-                if(tokens==null)
+                if (tokens == null)
                 {
-                    return Results.Json("Csrf token get failed" , AppJsonSerializerContext.Default.VerboseResponse, statusCode: StatusCodes.Status500InternalServerError);
+                    return Results.Json("Csrf token get failed", AppJsonSerializerContext.Default.VerboseResponse, statusCode: StatusCodes.Status500InternalServerError);
                 }
 
                 return Results.Ok(new CsrfToken { token = tokens.RequestToken });

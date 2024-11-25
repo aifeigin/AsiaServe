@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -9,7 +9,12 @@
     <SelfContained>true</SelfContained>
     <UseSourceGenerators>true</UseSourceGenerators>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Configurations>Debug;Release;ReleaseLinux</Configurations>
   </PropertyGroup>
+
+   <PropertyGroup Condition="'$(Configuration)' == 'ReleaseLinux|Any'">
+	<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+   </PropertyGroup>
 
    <ItemGroup>
 	<PackageReference Include="MailKit" Version="4.8.0" />

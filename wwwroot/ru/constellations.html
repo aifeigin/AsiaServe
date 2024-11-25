@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans&display=swap' rel='stylesheet'>
 
     <!--
         hrefs must be changed to the absolute urls before publish
@@ -36,7 +36,9 @@
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contactform.html">Contacts</a></li>
                         <li>
-                            <img src="/images/map-icons.svg" alt="lang" width="24px" height="24px">
+                            <label for="language-switcher">
+                                <img src="/images/map-icons.svg" alt="lang" width="24px" height="24px">
+                            </label>
                             <select id="language-switcher" onchange="changeLanguage()">
                                 <option value="/en/constellations.html" selected>EN</option>
                                 <option value="/pt/constellations.html">PT</option>

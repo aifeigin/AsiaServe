@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/contact.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans&display=swap' rel='stylesheet'>
 
     <!--
         hrefs must be changed to the absolute urls before publish
@@ -36,7 +36,9 @@
                         <li><a href="constellations.html">IT Constellations</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li>
-                            <img src="/images/map-icons.svg" alt="lang" width="24px" height="24px">
+                            <label for="language-switcher">
+                                <img src="/images/map-icons.svg" alt="lang" width="24px" height="24px">
+                            </label>
                             <select id="language-switcher" onchange="changeLanguage()">
                                 <option value="/en/contactform.html" selected>EN</option>
                                 <option value="/pt/contactform.html">PT</option>
@@ -51,7 +53,7 @@
             <div class="inner-container-contact left">
                 <h1>Let's connect</h1>
                 <img src="/images/my_photo.webp" width="226" height="230" alt="My photo" class="photo" />
-                <div>
+                <div class="min_lcp">
                     Привет, меня зовут Ася, я специалист по контролю качества, бизнес-консультант и бизнес-расстановщик из Мадейры, Португалия. Имея более чем 20-летний опыт в обеспечении качества и консультировании клиентов, я работаю частным предпринимателем, помогая компаниям повышать качество программного обеспечения и решать сложные задачи.
                     Я здесь, чтобы помогать как контролем качества, так и бизнес-расстановками.
                 </div>

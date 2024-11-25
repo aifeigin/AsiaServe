@@ -6,6 +6,7 @@ using MailServiceNext.Model;
 using MailServiceNext.Service;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json.Serialization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -26,6 +27,8 @@ string url = builder.Configuration.GetSection("SiteSettings").GetValue<string>("
 
 string defaultPage = builder.Configuration.GetSection("SiteSettings").GetValue<string>("DefaultPage");
 
+string url404 = builder.Configuration.GetSection("SiteSettings").GetValue<string>("404Page");
+
 // Add services for CORS, Anti-forgery, and controllers
 builder.Services.AddCors(options =>
 {
@@ -36,6 +39,8 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+// builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
 builder.Services.AddAntiforgery(options =>
 {
@@ -62,7 +67,7 @@ app.GetCrfToken();
 // Feedback endpoint (Minimal API style)
 app.FeedbackHook();
 
-app.UseStatusCodePagesWithReExecute("/pt/404.html");
+app.UseStatusCodePagesWithReExecute(url404 ?? "/pt/404.html");
 
 // Enable serving static files from wwwroot
 app.UseStaticFiles();
@@ -83,7 +88,7 @@ if (app.Environment.IsDevelopment())
 app.SetRewriteRules();
 
 // Serve index.html for the root URL
-app.MapFallbackToFile(defaultPage?? "/en/constellations.html");
+app.MapFallbackToFile(defaultPage ?? "/en/constellations.html");
 
 app.Run();
 
