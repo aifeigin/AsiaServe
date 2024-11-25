@@ -40,9 +40,9 @@
         }
 
         try {
-            let buttonID = document.getElementById("submit");
+            let button = document.getElementById("submit");
 
-            let buttonText = replaceButtonText(buttonID, "Wait<span class='dot'></span>");
+            let buttonText = replaceButtonText(button, "Wait<span class='dot'></span>");
 
             const response = await fetch(`${window.location.origin}/api/feedback`, {
                 method: "POST",
@@ -52,15 +52,18 @@
                     "X-Captcha-Token": captchaToken
                 },
                 body: JSON.stringify(feedbackData)
-            });
+            });            
 
-            replaceButtonText(buttonID, buttonText);
-
-            if (response.ok) {
+            if (response.ok) {                
                 alert("Feedback sent successfully!");
+                replaceButtonText(button, "Success");                
                 grecaptcha.reset(); // Reset the CAPTCHA after successful submission
+                button.className = "rounded-button disabled";
+                button.disabled = true;
+                button.title = "Please press F5 if you need to send another message";
             } else {
                 alert("Error sending feedback." + response.statusText);
+                replaceButtonText(button, buttonText);
             }
         } catch (error) {
             console.error("Error:", error);

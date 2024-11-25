@@ -114,3 +114,19 @@
 .small_text {
     font-size: 12px;
 }
+
+.rounded-button.disabled {
+    background-color: gray;
+    color: white; /* White text */
+}
+
+.rounded-button.disabled:hover {
+    border: 2px solid gray; /* Black border */
+    background-color: white;
+    color: gray; /* Black text */
+}
+
+.min_lcp {
+    text-align: start; /* Align text as early as possible */
+    transform: translate(0, 0); /* Avoid any layout shifts during the first render */
+}

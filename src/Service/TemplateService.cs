@@ -6,7 +6,7 @@
     public class TemplateService
     {
         private readonly Template _template;
-        public TemplateService(string resourceName) 
+        public TemplateService(string resourceName)
         {
             using (var stream = GetExecutingAssemblySafely().GetManifestResourceStream(resourceName))
             {
@@ -20,12 +20,12 @@
                     var templateS = reader.ReadToEnd();
 
                     _template = Template.Compile(templateS);
-                }                
+                }
             }
         }
-        public string GetHtmlBody(IDictionary<string,string> args)
+        public string GetHtmlBody(IDictionary<string, string> args)
         {
-             return _template.Render(args);
+            return _template.Render(args);
         }
 
         public static TemplateService Create()

@@ -17,13 +17,13 @@
             try
             {
                 var message = new MimeMessage();
-                string fromAddress = _configuration["EmailSettings:FromEmail"];                
+                string fromAddress = _configuration["EmailSettings:FromEmail"];
                 message.From.Add(new MailboxAddress(GetEmailUserName(fromAddress), fromAddress));
                 string toAddress = _configuration["EmailSettings:ToEmail"];
                 message.To.Add(new MailboxAddress(GetEmailUserName(toAddress), toAddress));
-                message.ReplyTo.Add(new MailboxAddress(GetEmailUserName(feedback.Email),feedback.Email));                
+                message.ReplyTo.Add(new MailboxAddress(GetEmailUserName(feedback.Email), feedback.Email));
                 message.Subject = feedback.Subject;
-                
+
                 if (_template == null)
                 {
                     _template = TemplateService.Create();
@@ -58,7 +58,7 @@
                 reloadOnChange: true)
                 .AddEnvironmentVariables()
                 .Build();
-            
+
             return new NativeEmailService(config);
         }
 
