@@ -303,6 +303,11 @@ margin-top: auto
 }
 @media screen and (max-width: 540px) {
     
+    .block {
+        display: flex;
+        align-items: center;
+        padding: 0px 0px;
+    }
     .inner-container {
         display: flex; /* Create a flex container for boxes */
         align-items: center;
@@ -347,8 +352,11 @@ margin-top: auto
         align-self: flex-end;
         margin-top: auto;
     }
-    
+
+   
+
 }
+
 
  @media (max-width: 1000px) {
           
