@@ -301,6 +301,27 @@ margin-top: auto
         margin-bottom: 10px;
     }
 }
+@media screen and (max-width: 540px) {
+    .menu-container .left .logo {
+        content: url('/images/logo.svg'); /* Подмена изображения */
+        width: 24px; /* Устанавливаем ширину */
+        height: auto; /* Сохраняем пропорции */
+    }
+
+    
+    .center .center-image {
+        width: 0px; /* Максимальная ширина центрального изображения - уменьшаем до 24*/
+        height: auto;
+         
+    }
+
+    .inner-container {
+        display: flex; /* Create a flex container for boxes */
+        align-items: center;
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px 20px 20px 20px;  
+    }
+}
 
  @media (max-width: 1000px) {
           
@@ -330,13 +351,7 @@ margin-top: auto
     
 }
 
-@media screen and (max-width: 540px) {
-    .logo {
-        content: url('/images/logo.svg'); /* Подмена изображения */
-        width: 24px; /* Устанавливаем ширину */
-        height: auto; /* Сохраняем пропорции */
-    }
-}
+
 
 /* Sasha - 5 box in container: */
 
