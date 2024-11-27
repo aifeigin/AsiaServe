@@ -53,16 +53,18 @@
 @media (max-width: 768px) {
     .inner-container-contact {
         min-width: 320px; /* Minimum width for the container */
-        padding: 5px; /* Adds padding */
-        gap: 5px; /* Adds space between the containers */
+        padding: 10px; /* Adds padding */
+        gap: 10px; /* Adds space between the containers */
+        background-color: green
     }
 }
 
 @media screen and (max-width: 540px) {
     .inner-container-contact {
         min-width: 260px; /* Minimum width for the container */
-        padding: 5px; /* Adds padding */
-        gap: 5px; /* Adds space between the containers */
+        padding: 10px; /* Adds padding */
+        gap: 10px; /* Adds space between the containers */
+        background-color: blue
     }
 }
 
