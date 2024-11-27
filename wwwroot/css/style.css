@@ -233,7 +233,6 @@ button {
 .inner-container {
     display: flex; /* Create a flex container for boxes */
     flex-direction: column; /* Stack sections vertically */
-    align-items: center;
     padding: 10px 80px 10px 80px;
 }
 
@@ -241,6 +240,15 @@ button {
     max-width: 70px; /* Максимальная ширина центрального изображения */
     height: auto;
 }
+
+.section-title {
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
 
 /* изменения для меньшего єкрана */
 @media (max-width: 768px) {
@@ -262,6 +270,8 @@ button {
     }
 
     .inner-container {
+        align-items: center;
+        justify-content:center;
         padding: 10px 20px 20px 20px;
     }
 
@@ -285,6 +295,11 @@ button {
         margin-bottom: 20px;
         box-shadow: -6px 12px 0 #EDF3FE;
         border-radius: 60%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 0px auto
     }
 
     h1 {
@@ -312,6 +327,8 @@ button {
     }
 
     .inner-container {
+        align-items: center;
+        justify-content: center;
         padding: 10px 20px 20px 20px;
     }
 
@@ -342,6 +359,11 @@ button {
 
     .center .center-image {
         display: none
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 0px auto
     }
 
     .black-container .text.w {
@@ -396,19 +418,6 @@ button {
     flex-wrap: wrap; /* Allow boxes to wrap to the next line */
     gap: 10px; /* Gap between boxes */
     justify-content: center; /* Center boxes horizontally*/
-}
-
-.section-title {
-    font-family: "Open Sans";
-    font-size: 26px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 20px;
-    display: flex; /* Turn .box into a flex container */
-    justify-content: center; /* Center text horizontally */
-    align-items: center;
-    width:100%;
-    background-color:green
 }
 
 
