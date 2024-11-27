@@ -66,6 +66,14 @@
     }
 }
 
+@media screen and (max-width: 460px) {
+    .inner-container-contact {
+        min-width: 200px; /* Minimum width for the container */
+        padding: 5px; /* Adds padding */
+        gap: 5px; /* Adds space between the containers */
+    }
+}
+
 .inner-container-contact.left {
     justify-content: flex-start; /* Align content to the top for vertical direction or left for row */
     align-items: flex-start; /* Align content to the left horizontally */
