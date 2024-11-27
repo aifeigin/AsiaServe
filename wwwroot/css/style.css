@@ -110,7 +110,7 @@ button {
 }
 
 .horizontal-menu li {
-    margin-left: 10px;
+    margin-left: 10px; 
     display: flex;
     align-content: center;
 }
@@ -256,7 +256,34 @@ button {
 }
 
 /* изменения для меньшего єкрана */
-@media (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+
+    .burger {
+        display: block;
+    }
+
+    .about-user div {
+        width: auto;
+        padding: 0px 10px;
+    }
+
+    .about-user {
+        border: none;
+        padding: 0px 20px;
+    }
+
+    .inner-container {
+        padding: 20px 20px 20px 20px;
+    }
+
+    .about-user img {
+        max-width: 200px;
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
 
     .burger {
         display: block;
@@ -276,7 +303,7 @@ button {
 
     .inner-container {
         align-items: center;
-        justify-content:center;
+        justify-content: center;
         padding: 10px 20px 20px 20px;
     }
 
@@ -366,6 +393,10 @@ button {
         display: none
     }
 
+    .horizontal-menu li {
+        margin-left: 5px;
+    }
+
     .map-switch {
         display: none
     }
@@ -383,7 +414,6 @@ button {
         margin-top: auto;
     }
 }
-
 
 @media screen and (max-width: 460px) {
 
@@ -439,6 +469,10 @@ button {
         display: none
     }
 
+    .horizontal-menu li {
+        margin-left: 0px;
+    }
+
     .section-title {
         text-align: center;
         margin: 0px;
@@ -453,34 +487,6 @@ button {
         margin-top: auto;
     }
 }
-
-@media (max-width: 1000px) {
-
-    .burger {
-        display: block;
-    }
-
-    .about-user div {
-        width: auto;
-        padding: 0px 10px;
-    }
-
-    .about-user {
-        border: none;
-        padding: 0px 20px;
-    }
-
-    .inner-container {
-        padding: 20px 20px 20px 20px;
-    }
-
-    .about-user img {
-        max-width: 200px;
-        width: 200px;
-        height: auto;
-    }
-}
-
 
 
 /* Sasha - 5 box in container: */
