@@ -52,7 +52,7 @@
 /* изменения для меньшего єкрана */
 @media (max-width: 768px) {
     .inner-container-contact {
-        min-width: 360px; /* Minimum width for the container */
+        min-width: 320px; /* Minimum width for the container */
         padding: 5px; /* Adds padding */
         gap: 5px; /* Adds space between the containers */
     }
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 540px) {
     .inner-container-contact {
-        min-width: 280px; /* Minimum width for the container */
+        min-width: 260px; /* Minimum width for the container */
         padding: 5px; /* Adds padding */
         gap: 5px; /* Adds space between the containers */
     }
