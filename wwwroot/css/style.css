@@ -407,6 +407,8 @@ button {
     display: flex; /* Turn .box into a flex container */
     justify-content: center; /* Center text horizontally */
     align-items: center;
+    width:100%;
+    background-color:green
 }
 
 
