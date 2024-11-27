@@ -249,6 +249,11 @@ button {
     padding-bottom: 20px;
 }
 
+.block {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
 
 /* изменения для меньшего єкрана */
 @media (max-width: 768px) {
@@ -323,7 +328,7 @@ button {
     .block {
         display: flex;
         align-items: center;
-        padding: 0px 0px;
+        padding: 0px;
     }
 
     .inner-container {
@@ -358,6 +363,10 @@ button {
     }
 
     .center .center-image {
+        display: none
+    }
+
+    .map-switch {
         display: none
     }
 
@@ -423,6 +432,10 @@ button {
     }
 
     .center .center-image {
+        display: none
+    }
+
+    .map-switch {
         display: none
     }
 
@@ -544,12 +557,6 @@ button {
     align-items: stretch;
     padding: 15px;
     background-color: black;
-}
-
-.block {
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
 }
 
 .left.logo {
