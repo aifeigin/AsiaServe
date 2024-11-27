@@ -404,7 +404,9 @@ button {
     font-weight: bold;
     color: black;
     margin-bottom: 20px;
-    text-align: center
+    display: flex; /* Turn .box into a flex container */
+    justify-content: center; /* Center text horizontally */
+    align-items: center;
 }
 
 
