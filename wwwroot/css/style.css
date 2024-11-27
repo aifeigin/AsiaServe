@@ -376,6 +376,71 @@ button {
 }
 
 
+@media screen and (max-width: 460px) {
+
+    .block {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .inner-container {
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+        
+    }
+
+    .menu-container .left .logo {
+        content: url('/images/logo.svg'); /* Подмена изображения */
+        width: 24px; /* Устанавливаем ширину */
+        height: auto; /* Сохраняем пропорции */
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .horizontal-menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        /*line-height: 10px;*/
+        font-weight: 600;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .black-container .menu_down a {
+        padding: 0px;
+        font-size: 14px;
+        /*line-height: 10px;*/
+        font-weight: normal;
+        text-decoration: none;
+        color: white;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .center .center-image {
+        display: none
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 0px;
+        
+    }
+
+    .black-container .text.w {
+        font-size: 11px;
+        font-weight: normal;
+        color: white;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+}
+
 @media (max-width: 1000px) {
 
     .burger {
