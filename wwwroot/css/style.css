@@ -373,7 +373,7 @@ button {
     .horizontal-menu a {
         text-decoration: none;
         color: black;
-        font-size: 14px;
+        font-size: 15px;
         /*line-height: 10px;*/
         font-weight: 600;
         padding: 0px;
@@ -590,9 +590,9 @@ button {
 }
 
 .menu_down a {
-    padding: 15px;
+    
     font-size: 16px;
-    line-height: 20px;
+    line-height: 16px;
     font-weight: normal;
     text-decoration: none;
     color: white;
