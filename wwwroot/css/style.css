@@ -153,7 +153,7 @@ button {
 .about-user {
     display: flex;
     justify-content: space-between;
-    padding: 20px 180px;
+    padding: 10px 80px;
 }
 
     .about-user div {
@@ -249,10 +249,7 @@ button {
     .inner-container {
         padding: 20px 80px 20px 80px;
     }
-    .about-user {
-        border: none;
-        padding: 10px 80px;
-    }
+   
 }    
 
   
