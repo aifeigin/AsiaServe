@@ -52,17 +52,17 @@
 /* изменения для меньшего єкрана */
 @media screen and (max-width: 768px) {
     .inner-container-contact {
-        min-width: 320px; /* Minimum width for the container */
+        min-width: 385px; /* Minimum width for the container */
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 520px) {
     .inner-container-contact {
         min-width: 260px; /* Minimum width for the container */
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 440px) {
     .inner-container-contact {
         min-width: 220px; /* Minimum width for the container */
     }
