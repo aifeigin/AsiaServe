@@ -133,6 +133,7 @@ button {
     background: linear-gradient(to right, E3EDFF, rgba(237, 243, 254, 0)); /* Градиентная линия */
 }
 
+/* Стиль для 404 */
 .pt-menu a {
     text-decoration: none; /* меню 404 */
     color: #0038FF;
@@ -149,6 +150,22 @@ button {
         font-weight: 600;
     }
 
+    /* Стиль для ссылки в офере */
+.of-menu a {
+    text-decoration: none; /* меню 404 */
+    color: #0038FF;
+    
+    /*line-height: 10px;*/
+    
+}
+
+.of-menu a:hover {
+        text-decoration: none; /* меню 404 */
+        color: #AAC4F4;
+       
+        /*line-height: 10px;*/
+    
+    }
 /* Стиль для верхней части текста с картинкой на стр QA и Расстановки: */
 .about-user {
     display: flex;
@@ -217,13 +234,22 @@ button {
     }
 /**** Changes 07.11.2024 ****/
 
+/* для оферов и блога для большого экрана */
+.blog.inner-container {
+    display: flex; /* Create a flex container for boxes */
+    flex-direction: column; /* Stack sections vertically */
+    padding: 20px 180px 20px 180px;
+    gap: 20px;
+}
+
 
 /* 5 блоков начало */
 .inner-container {
     display: flex; /* Create a flex container for boxes */
     flex-direction: column; /* Stack sections vertically */
-    padding: 20px 180px 20px 180px;
+    padding: 10px 80px 10px 80px;
 }
+
 
 .center .center-image {
     max-width: 70px; /* Максимальная ширина центрального изображения */
@@ -249,11 +275,17 @@ button {
     .inner-container {
         padding: 20px 80px 20px 80px;
     }
-   
+    .blog.inner-container {
+        display: flex; /* Create a flex container for boxes */
+        flex-direction: column; /* Stack sections vertically */
+        padding: 20px 80px 20px 80px;
+        gap: 20px;
+    }
+    
+
 }    
 
   
-
 @media screen and (max-width: 1000px) {
     
     .about-user div {
@@ -270,6 +302,13 @@ button {
         padding: 20px 20px 20px 20px;
     }
 
+    .blog.inner-container {
+        display: flex; /* Create a flex container for boxes */
+        flex-direction: column; /* Stack sections vertically */
+        padding: 20px 20px 20px 20px;
+        gap: 20px;
+    }
+    
     .about-user img {
         max-width: 200px;
         width: 200px;

@@ -3,8 +3,14 @@
     margin: 0 0px 0px 0; /* Добавляет отступы вокруг изображения */
 }
 
+.kubeleft {
+    float: left; /* или right, если хотите, чтобы изображение было справа */
+    margin: 0 0px 0px 0; /* Добавляет отступы вокруг изображения */
+}
+
+
 .inner-container.blog-container {
-    gap: 15px;
+    gap: 20px;
 }
 
 .article {
