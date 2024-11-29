@@ -163,7 +163,7 @@ button {
 
     .about-user img {
         width: 250px;
-        height: auto;
+        height: 250px;
         max-width: 250px;
         padding: 0px;
         margin-top: auto
@@ -273,7 +273,7 @@ button {
     .about-user img {
         max-width: 200px;
         width: 200px;
-        height: auto;
+        height: 200px;
     }
 }
 
