@@ -152,7 +152,7 @@ button {
 
     /* Стиль для ссылки в офере */
 .of-menu a {
-    text-decoration: none; /* меню 404 */
+    text-decoration: none; 
     color: #0038FF;
     
     /*line-height: 10px;*/
@@ -160,7 +160,7 @@ button {
 }
 
 .of-menu a:hover {
-        text-decoration: none; /* меню 404 */
+        text-decoration: none; 
         color: #AAC4F4;
        
         /*line-height: 10px;*/
