@@ -123,6 +123,13 @@ button {
     font-weight: 600;
 }
 
+.horizontal-menu a:hover {
+    text-decoration: none;
+    color: #0038FF;
+
+    
+}
+
 .menu-container:after {
     content: "";
     position: absolute;
@@ -154,18 +161,15 @@ button {
 .of-menu a {
     text-decoration: none; 
     color: #0038FF;
-    
-    /*line-height: 10px;*/
-    
+            
 }
 
 .of-menu a:hover {
-        text-decoration: none; 
+        text-decoration: none; /* меню 404 */
         color: #AAC4F4;
-       
-        /*line-height: 10px;*/
-    
+                  
     }
+    
 /* Стиль для верхней части текста с картинкой на стр QA и Расстановки: */
 .about-user {
     display: flex;
@@ -627,6 +631,12 @@ button {
     font-weight: normal;
     text-decoration: none;
     color: white;
+}
+
+.menu_down a:hover {
+    text-decoration: none; 
+    color: #AAC4F4;
+   
 }
 /*char GPT menu_down* конец*/
 
