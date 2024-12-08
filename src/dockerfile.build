@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
+# Install NativeAOT build prerequisites
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       clang zlib1g-dev
+
+WORKDIR /source
+
+COPY . .
+
+RUN dotnet publish -o /app

@@ -238,6 +238,13 @@ button {
     }
 /**** Changes 07.11.2024 ****/
 
+@supports (-webkit-touch-callout: none) {
+    .rounded-button {
+        line-height: normal; /* Override potential Safari quirks */
+        padding: 0 30px; /* Ensure consistent padding */
+    }
+}
+
 /* для оферов и блога для большого экрана */
 .blog.inner-container {
     display: flex; /* Create a flex container for boxes */
@@ -540,7 +547,7 @@ button {
 /* Sasha - 5 box in container: */
 .box {
     width: 340px; /* Fixed width for boxes */
-    height: 200px; /* Fixed height for boxes */
+    /* height: 200px; Fixed height for boxes */
     background-color: white; /* Box background color */
     border-radius: 10px;
     color: #45474C; /* Text color */
@@ -548,6 +555,7 @@ button {
     flex-direction: column; /* Stack sections vertically */
     align-items: center; /* Center text vertically */
     /*justify-content: center; /* Center text horizontally */
+    padding: 15px;
 }
 
 .box-title-container {
@@ -575,11 +583,19 @@ button {
 
 .box-content-container {
     width: 280px; /* Fixed width for box title container */
-    height: 112px;
+    /* height: 112px; */
     align-items: center; /* Center text vertically */
     text-align: left; /* left content */
     display: flex; /* Flex for centering content */
     color: #45474C
+}
+
+.box {
+    min-height: 200px; /* Use minimum height instead of fixed */
+}
+
+.box-content-container {
+    height: auto; /* Allow content to dictate height */
 }
 
 .photo {
