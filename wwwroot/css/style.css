@@ -561,7 +561,7 @@ button {
 .box-title-container {
     width: 280px; /* Fixed width for box title container */
     height: 48px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     align-items: center; /* Center text vertically */
     justify-content: left; /* Align content to left */
     display: flex; /* Flex for centering content */
