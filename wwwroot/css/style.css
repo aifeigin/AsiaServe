@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box; /* Ensure padding and margin don't affect width */
+    box-sizing: border-box;/* Ensure padding and margin don't affect width */
 }
 
 
@@ -12,7 +12,7 @@ body {
     align-items: center; /* Center vertically */
     /* height: 100vh; Full height */
     margin: 0; /* Remove default margin */
-    gap: 10px;
+    gap: 10px; 
 }
 
 
@@ -34,7 +34,6 @@ h2 {
     margin-bottom: 10px;
     font-weight: bold;
 }
-
 h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -75,6 +74,7 @@ button {
     margin-bottom: 10px;
     margin-top: 20px;
     font-weight: bold;
+    
 }
 
 .text-NN {
@@ -82,6 +82,7 @@ button {
     margin-bottom: 10px;
     margin-top: 10px;
     font-weight: bold;
+    
 }
 
 /* общий стиль end*/
@@ -110,7 +111,7 @@ button {
 }
 
 .horizontal-menu li {
-    margin-left: 10px; 
+    margin-left: 10px;
     display: flex;
     align-content: center;
 }
@@ -122,78 +123,61 @@ button {
     /*line-height: 10px;*/
     font-weight: 600;
 }
-
-.horizontal-menu a:hover {
-    text-decoration: none;
-    color: #0038FF;
-
-    
-}
-
 .menu-container:after {
     content: "";
     position: absolute;
     bottom: 0; /* Линия будет внизу контейнера */
     left: 0;
     width: 100%;
-    height: 14px; /* Толщина линии */
+    height: 10px; /* Толщина линии */
     background: linear-gradient(to right, E3EDFF, rgba(237, 243, 254, 0)); /* Градиентная линия */
+    
 }
 
-/* Стиль для 404 */
-.pt-menu a {
-    text-decoration: none; /* меню 404 */
+.pt-menu a { 
+    text-decoration: none;  /* меню 404 */
     color: #0038FF;
     font-size: 16px;
     /*line-height: 10px;*/
     font-weight: 600;
+ 
 }
 
-    .pt-menu a:hover {
-        text-decoration: none; /* меню 404 */
-        color: #AAC4F4;
-        font-size: 16px;
-        /*line-height: 10px;*/
-        font-weight: 600;
-    }
-
-    /* Стиль для ссылки в офере */
-.of-menu a {
-    text-decoration: none; 
-    color: #0038FF;
-            
+.pt-menu a:hover { 
+    text-decoration: none;  /* меню 404 */
+    color: #AAC4F4;
+    font-size: 16px;
+    /*line-height: 10px;*/
+    font-weight: 600;
+ 
 }
 
-.of-menu a:hover {
-        text-decoration: none; /* меню 404 */
-        color: #AAC4F4;
-                  
-    }
-    
 /* Стиль для верхней части текста с картинкой на стр QA и Расстановки: */
 .about-user {
     display: flex;
     justify-content: space-between;
-    padding: 10px 80px;
+    padding: 0px 80px;
+    
 }
 
-    .about-user div {
-        width: auto;
-        padding: 0px 0px;
-    }
+.about-user div {
+    width: auto;
+    padding: 0px 0px;
+    
+}
 
-    .about-user img {
-        width: 250px;
-        height: 250px;
-        max-width: 250px;
-        padding: 0px;
-        margin-top: auto
-    }
+.about-user img {
+width: 250px; height: 250; max-width: 250px;
+padding: 0px;
+margin-top: auto
+
+}
 
 /* 2 кнопки: офер и контакт: */
 .button-container {
     display: flex;
-    gap: 10px;
+    gap: 10px; 
+    
 }
 
 /**** Changes 07.11.2024 ****/
@@ -212,40 +196,43 @@ button {
     text-align: center; /* Center the text */
 }
 
-    .rounded-button.left {
-        background-color: #0038FF; /* Blue background */
-        color: white; /* White text */
-    }
-
-    .rounded-button.right {
-        background-color: black;
-        color: white; /* White text */
-    }
-
-    .rounded-button.left:hover {
-        border: 2px solid black; /* Black border */
-        color: black; /* Black text */
-    }
-
-    .rounded-button.right:hover {
-        border: 2px solid #0038FF; /* Blue border */
-        color: #0038FF; /* Blue text */
-    }
-
-    /* Change background color on hover */
-    .rounded-button:hover {
-        background-color: white;
-    }
-/**** Changes 07.11.2024 ****/
-
-/* для оферов и блога для большого экрана */
-.blog.inner-container {
-    display: flex; /* Create a flex container for boxes */
-    flex-direction: column; /* Stack sections vertically */
-    padding: 20px 180px 20px 180px;
-    gap: 20px;
+.rounded-button.left {
+    background-color: #0038FF; /* Blue background */
+    color: white; /* White text */
 }
 
+.rounded-button.right {
+    background-color: black;
+    color: white; /* White text */
+}
+
+.rounded-button.left:hover {
+    border: 2px solid black; /* Black border */
+    color: black; /* Black text */
+ }
+
+.rounded-button.right:hover {
+    border: 2px solid #0038FF; /* Blue border */
+    color: #0038FF; /* Blue text */
+}
+
+/* Change background color on hover */
+.rounded-button:hover {
+    background-color: white;
+}
+/**** Changes 07.11.2024 ****/
+
+/* появляющееся меню в 4 линии - не используется */
+.burger {
+    width: 30px;
+    height: 20px;
+    margin-left: auto;
+    display: none;
+    border: none;
+    background-image: url('imagis/menu.svg');
+    background-color: transparent;
+    cursor: pointer;
+}
 
 /* 5 блоков начало */
 .inner-container {
@@ -254,100 +241,39 @@ button {
     padding: 10px 80px 10px 80px;
 }
 
-
-.center .center-image {
-    max-width: 70px; /* Максимальная ширина центрального изображения */
-    height: auto;
-}
-
-.section-title {
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 20px;
-}
-
-.block {
-    display: flex;
-    align-items: center;
-    padding: 0px 10px;
-}
-
-/* изменения для большего єкрана */
-@media screen and (max-width: 1240px) {
-    .inner-container {
-        padding: 20px 80px 20px 80px;
-    }
-    .blog.inner-container {
-        display: flex; /* Create a flex container for boxes */
-        flex-direction: column; /* Stack sections vertically */
-        padding: 20px 80px 20px 80px;
-        gap: 20px;
+/* изменения для меньшего єкрана */
+@media (max-width: 768px) {
+          
+    .burger{
+        display: block;
     }
     
-
-}    
-
-  
-@media screen and (max-width: 1000px) {
-    
-    .about-user div {
-        width: auto;
-        padding: 0px 10px;
-    }
-
-    .about-user {
-        border: none;
-        padding: 0px 20px;
-    }
-
-    .inner-container {
-        padding: 20px 20px 20px 20px;
-    }
-
-    .blog.inner-container {
-        display: flex; /* Create a flex container for boxes */
-        flex-direction: column; /* Stack sections vertically */
-        padding: 20px 20px 20px 20px;
-        gap: 20px;
-    }
-    
-    .about-user img {
-        max-width: 200px;
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    
-
     .about-user div {
         width: auto;
         padding: 0px 20px;
     }
 
     .about-user {
-        flex-direction: column;
-        align-items: center;
-        border: none;
-        padding: 0px 10px;
+       flex-direction: column;
+       align-items: center;
+       border: none;
+       padding: 0px 10px;
     }
 
     .inner-container {
+        display: flex; /* Create a flex container for boxes */
         align-items: center;
-        justify-content: center;
-        padding: 10px 20px 20px 20px;
+        flex-direction: column; /* Stack sections vertically */
+        padding: 10px 20px 20px 20px;  
     }
 
-    .button-container {
+    .button-container
+    {
         flex-direction: column;
         align-items: center;
         border: none;
-    }
-
+     }
+    
     .about-user div {
         order: 1;
         text-align: center;
@@ -364,162 +290,45 @@ button {
         border-radius: 60%;
     }
 
-    .section-title {
-        text-align: center;
-        margin: 0px auto
-    }
-
-    h1 {
-        font-size: 28px;
+    h1 {font-size: 28px;
         margin-bottom: 5px;
-    }
-
-    h2 {
-        font-size: 22px;
+     }
+     h2 {font-size: 22px;
         margin-bottom: 10px;
-    }
-
+     }
     p {
         font-size: 16x;
         margin-bottom: 10px;
     }
 }
 
-@media screen and (max-width: 540px) {
-
-    .block {
-        display: flex;
-        align-items: center;
-        padding: 0px;
+ @media (max-width: 1000px) {
+          
+    .burger{
+        display: block;
     }
 
-    .inner-container {
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px 20px 20px;
+    .about-user div {
+        width: auto;
+        padding: 0px 10px;
     }
+    .about-user {
+        border: none;
+        padding: 0px 20px;
+     }
 
-    .menu-container .left .logo {
-        content: url('/images/logo.svg'); /* Подмена изображения */
-        width: 24px; /* Устанавливаем ширину */
-        height: auto; /* Сохраняем пропорции */
+   .inner-container {
+        display: flex; /* Create a flex container for boxes */
+        flex-direction: column; /* Stack sections vertically */
+        padding: 20px 20px 20px 20px;
     }
-
-    .horizontal-menu a {
-        text-decoration: none;
-        color: black;
-        font-size: 15px;
-        /*line-height: 10px;*/
-        font-weight: 600;
-        padding: 0px;
+     .about-user img {        
+        max-width: 200px;
+        width: 200px;
+        height: auto;
     }
-
-    .black-container .menu_down a {
-        padding: 0px;
-        font-size: 14px;
-        /*line-height: 10px;*/
-        font-weight: normal;
-        text-decoration: none;
-        color: white;
-        padding: 0px;
-    }
-
-    .center .center-image {
-        display: none
-    }
-
-    .horizontal-menu li {
-        margin-left: 5px;
-    }
-
-    .map-switch {
-        display: none
-    }
-
-    .section-title {
-        text-align: center;
-        margin: 0px auto
-    }
-
-    .black-container .text.w {
-        font-size: 11px;
-        font-weight: normal;
-        color: white;
-        align-self: flex-end;
-        margin-top: auto;
-    }
+    
 }
-
-@media screen and (max-width: 460px) {
-
-    .block {
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .inner-container {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .menu-container .left .logo {
-        content: url('/images/logo.svg'); /* Подмена изображения */
-        width: 24px; /* Устанавливаем ширину */
-        height: auto; /* Сохраняем пропорции */
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .horizontal-menu a {
-        text-decoration: none;
-        color: black;
-        font-size: 14px;
-        /*line-height: 10px;*/
-        font-weight: 600;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .black-container .menu_down a {
-        padding: 0px;
-        font-size: 14px;
-        /*line-height: 10px;*/
-        font-weight: normal;
-        text-decoration: none;
-        color: white;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .center .center-image {
-        display: none
-    }
-
-    .map-switch {
-        display: none
-    }
-
-    .horizontal-menu li {
-        margin-left: 0px;
-    }
-
-    .section-title {
-        text-align: center;
-        margin: 0px;
-        
-    }
-
-    .black-container .text.w {
-        font-size: 11px;
-        font-weight: normal;
-        color: white;
-        align-self: flex-end;
-        margin-top: auto;
-    }
-}
-
 
 /* Sasha - 5 box in container: */
 
@@ -536,6 +345,15 @@ button {
     justify-content: center; /* Center boxes horizontally*/
 }
 
+.section-title {
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 20px;
+    
+}
+
 
 /* Sasha - 5 box in container: */
 .box {
@@ -547,12 +365,12 @@ button {
     display: flex; /* Flex for centering content */
     flex-direction: column; /* Stack sections vertically */
     align-items: center; /* Center text vertically */
-    /*justify-content: center; /* Center text horizontally */
+     /*justify-content: center; /* Center text horizontally */
 }
 
 .box-title-container {
     width: 280px; /* Fixed width for box title container */
-    height: 48px;
+    height : 48px;
     margin-top: 20px;
     align-items: center; /* Center text vertically */
     justify-content: left; /* Align content to left */
@@ -563,23 +381,23 @@ button {
 .box-title {
     padding-left: 16px;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size:20px;
     font-weight: bold;
-    color: black
+    color:black
 }
 
 .box-icon {
-    width: 36px;
-    height: 36px;
-}
+    width: 36px; 
+    height : 36px;
+} 
 
 .box-content-container {
     width: 280px; /* Fixed width for box title container */
-    height: 112px;
+    height : 112px;
     align-items: center; /* Center text vertically */
-    text-align: left; /* left content */
+    text-align: left ; /* left content */
     display: flex; /* Flex for centering content */
-    color: #45474C
+    color:#45474C
 }
 
 .photo {
@@ -592,17 +410,24 @@ button {
 .black-container {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     padding: 15px;
     background-color: black;
 }
 
+.block {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
 .left.logo {
-    height: auto;
-    margin: 10px 10px 0px 10px;
+    height: auto; /* Высота логотипа */
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px
 }
 
 .text.w {
@@ -610,13 +435,19 @@ button {
     font-weight: normal;
     color: white;
     align-self: flex-end;
-    margin-top: auto;
+}
+
+.center .center-image {
+    max-width: 70px; /* Максимальная ширина центрального изображения */
+    height: auto;
+     
 }
 
 .menu_down ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 
 .menu_down li {
@@ -625,18 +456,12 @@ button {
 }
 
 .menu_down a {
-    
+    padding: 15px;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 20px;
     font-weight: normal;
     text-decoration: none;
     color: white;
-}
-
-.menu_down a:hover {
-    text-decoration: none; 
-    color: #AAC4F4;
-   
 }
 /*char GPT menu_down* конец*/
 
@@ -650,8 +475,8 @@ button {
     font-size: 12px;
 }
 
-/* Style for the dropdown */
-#language-switcher select {
+    /* Style for the dropdown */
+    #language-switcher select {
         appearance: none; /* Removes native styling */
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -665,14 +490,14 @@ button {
         text-align-last: center; /* Centers the text for most browsers */
     }
 
-/* Focus styling */
-#language-switcher select:focus {
-     outline: none;
-     border-color: #0078d7;
-}
+        /* Focus styling */
+        #language-switcher select:focus {
+            outline: none;
+            border-color: #0078d7;
+        }
 
-/* Custom arrow */
-#language-switcher::after {
+    /* Custom arrow */
+    #language-switcher::after {
         content: "в-_"; /* Down arrow */
         position: absolute;
         right: 12px;
