@@ -207,8 +207,8 @@ button {
     cursor: pointer; /* Pointer on hover */
     font-size: 14px; /* Font size */
     width: 180px; /* Button width */
-    height: 40px; /* Button width */
-    line-height: 48px;
+    height: 40px; /* Button height */
+    line-height: normal;
     text-align: center; /* Center the text */
 }
 
