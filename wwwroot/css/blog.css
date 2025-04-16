@@ -10,12 +10,6 @@
     padding: 0px; /* пространство между изображением и рамкой */
 }
 
-.kubeleft {
-    float: left; /* или right, если хотите, чтобы изображение было слева */
-    margin: 0 0px 0px 0; /* Добавляет отступы вокруг изображения */
-}
-
-
 .inner-container.blog-container {
     gap: 20px;
 }
